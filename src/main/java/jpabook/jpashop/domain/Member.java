@@ -15,11 +15,12 @@ public class Member {
     @Id @GeneratedValue
     private Long id;
 
-    private String userName;
+    private String username;
     @Embedded
     private Address address;
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
+    
 }
